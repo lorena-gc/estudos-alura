@@ -1,8 +1,8 @@
-package com.lorenagomes.conta;
+package com.lorenagomes.modelo;
 
-import com.lorenagomes.modelo.SaldoInsulficienteException;
+import com.lorenagomes.conta.Cliente;
 
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta>{
 
     protected double saldo;
     private int agencia;
@@ -71,12 +71,28 @@ public abstract class Conta {
     }
 
     @Override
+    public boolean equals(Object ref){
+        Conta outraConta = (Conta) ref;
+        if(this.agencia != outraConta.agencia) {
+            return false;
+        }
+        if(this.numero != outraConta.numero) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "Conta{" +
                 "saldo=" + saldo +
                 ", agencia=" + agencia +
                 ", numero=" + numero +
-                ", titular=" + titular +
+                ", titular=" + titular.getNome() +
                 '}';
+    }
+    @Override
+    public int compareTo(Conta outra) {
+        return Double.compare(this.saldo, outra.saldo);
     }
 }

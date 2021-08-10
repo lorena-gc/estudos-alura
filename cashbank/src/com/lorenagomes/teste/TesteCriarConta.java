@@ -1,7 +1,7 @@
 package com.lorenagomes.teste;
 
 import com.lorenagomes.conta.Cliente;
-import com.lorenagomes.conta.Conta;
+import com.lorenagomes.modelo.Conta;
 import com.lorenagomes.conta.ContaCorrente;
 
 public class TesteCriarConta{

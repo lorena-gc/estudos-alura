@@ -1,13 +1,13 @@
 package com.lorenagomes.teste;
 
 import com.lorenagomes.conta.ContaCorrente;
-import com.lorenagomes.conta.ContaPoupança;
+import com.lorenagomes.conta.ContaPoupanca;
 
 public class TesteContas {
 
     public static void main(String[] args) throws Exception {
         ContaCorrente cc = new ContaCorrente(1020,10210);
-        ContaPoupança cp = new ContaPoupança(1020,10310);
+        ContaPoupanca cp = new ContaPoupanca(1020,10310);
 
         cc.deposita(200);
         cp.deposita(300);

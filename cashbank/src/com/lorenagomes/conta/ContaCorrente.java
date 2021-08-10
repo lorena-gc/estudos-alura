@@ -1,5 +1,6 @@
 package com.lorenagomes.conta;
 
+import com.lorenagomes.modelo.Conta;
 import com.lorenagomes.modelo.Tributavel;
 
 public class ContaCorrente extends Conta implements Tributavel {
